@@ -1,0 +1,164 @@
+// ye code phele file ye lagne hai.
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     for(int i=1;i<=4;i++){
+//         for(int j=1;j<=i;j++){
+//             cout<<" ";
+//         }
+//         cout<<" ";
+//         for(int k=4;k>=i;k--){
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//         for(int i=1;i<=4;i++){
+//          for(int j=1;j<=i;j++){
+//              cout<<" ";
+//          }
+//          cout<<" ";
+//          for(int k=4;k>=i;k--){
+//              cout<<i;
+//          }
+//          cout<<endl;
+//      }
+//    return 0;
+
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     for(int i=1;i<=4;i++){
+//         for(int j=4;j>=i;j--){
+//             cout<<" ";
+//         }
+
+//         for(int k=1;k<=i;k++){
+//            cout<<i;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }    
+
+//  #include<iostream>
+//  using namespace std;
+//  int main(){
+//     int value=1;
+//      for(int i=1;i<=4;i++){
+//          for(int j=1;j<=i;j++){
+//              cout<<" ";
+//          }
+//          cout<<" ";
+//         value=i;
+//          for(int k=4;k>=i;k--){
+//             cout<<value;
+//             value++;
+//          }
+//          cout<<endl;
+//      }
+//      return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int value=1;
+//     for(int i=1;i<=4;i++){
+//         for(int j=4;j>=i;j--){
+//             cout<<" ";
+//         }
+
+//         for(int k=1;k<=i;k++){
+//            cout<<value;
+//            value++;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int value=1;
+//     for(int i=1;i<=4;i++){
+//         for(int j=4;j>=i;j--){
+//             cout<<" ";
+//         }
+    
+//         for(int k=1;k<=i;k++){
+//            cout<<k;
+//         }
+//         for(int g=i;g>=1;g--){
+//             cout<<g;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int value=1;
+//     for(int i=1;i<=4;i++){
+//         for(int j=4;j>=i;j--){
+//             cout<<" ";
+//         }
+    
+//         for(int k=1;k<=i;k++){
+//            cout<<k;
+//         }
+//         for(int g=i-1;g>=1;g--){
+//             cout<<g;
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int count=0;
+//     for(int i=5;i>=0;i--){
+//         for(int j=1;j<=i;j++){
+//             cout<<j;
+//         }
+//         cout<<" ";
+
+//         for(int k=1;k<=count;k++){
+//             cout<<"*";
+//             cout<<" ";
+           
+//         }
+//         count++;
+//         if(count==5){
+//             break;
+//         }
+//         for(int p=i;p>=1;p--){
+//             cout<<p;
+//         }
+        
+//         cout<<endl;
+//     }
+
+//     return 0;
+// }
