@@ -1,0 +1,457 @@
+// #include<iostream>
+// using namespace std;
+// int binarysearch(int arr[],int n,int key){
+//     int start=0;
+//     int end=n-1;
+//     int mid = start + (end -start)/2;
+//     while(start<=end){
+//         if(arr[mid]==key){
+//             return mid;
+//         }
+//         if(arr[mid]>key){
+//             end=mid-1;
+//         }
+//         else{
+//             start=mid+1;
+//         }
+//         mid= start + (end -start)/2;
+//     }
+
+//     return -1;
+// }
+// int main(){
+    
+//     int odd[5]={2,34,45,65,67};
+//     int even[6]={1,23,4,5,6,8};
+
+//     int evensearch= binarysearch(even,6,8);
+//     int oddsearch= binarysearch(odd,5,34);
+//     cout<<"even search "<<evensearch<<endl;
+//     cout<<"odd search "<<oddsearch<<endl;
+// }
+
+//problems 
+
+// #include<iostream>
+// using namespace std;
+// int firstocc(int arr[],int n,int key){
+//     int start=0;
+//     int end=n-1;
+//     int ans=-1;
+//     int mid = start + (end-start)/2;
+//     while(start<=end){
+//         if(arr[mid]==key){
+//             ans=mid;
+//             end=mid-1;
+//         }
+//         else if(key>arr[mid]){
+//             start=mid+1;
+//         }
+//         else if(key<arr[mid]){
+//             end=mid-1;
+//         }
+
+//         mid= start + (end-start)/2;
+//     }
+
+//     return ans;
+// }
+
+
+// int lastocc(int arr[],int n,int key){
+//     int start=0;
+//     int end=n-1;
+//     int ans=-1;
+//     int mid = start + (end-start)/2;
+//     while(start<=end){
+//         if(arr[mid]==key){
+//             ans=mid;
+//             start= mid+1;
+//         }
+//         else if(key>arr[mid]){
+//             start=mid+1;
+//         }
+//         else if(key<arr[mid]){
+//             end=mid-1;
+//         }
+
+//         mid= start + (end-start)/2;
+//     }
+
+//     return ans;
+// }
+
+// int main(){
+//     int arr[9]={1,2,3,4,4,4,4,5};
+
+//     int first=firstocc(arr,9,4);
+//     int last =lastocc(arr,9,4);
+
+//     int Total_occurence = lastocc(arr,9,4) - firstocc(arr,9,4) + 1;
+
+
+//     cout<<"first occurence at index "<<first<<endl;
+
+//     cout<<"last occurence at index "<<last<<endl;
+    
+//     cout<<"total no of occurence of that element is "<< Total_occurence;
+
+
+//     return 0;
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int peakindexfound(int arr[],int n){
+//     int start=0;
+//     int end=n-1;
+//     int mid= start + (end - start) / 2;
+//     while(start<end){
+//         if((mid<n-1) && (arr[mid]<arr[mid+1])){
+//             start=mid+1;  // mid element ke pass leke jaye ghe.
+//         }
+//         else{
+//             end=mid;
+//         }
+
+//         mid = start + (end - start ) / 2;
+//     }
+
+//     return start;
+// }
+
+// int main(){
+
+//     int arr[9]={0,1,2,3,5,6,2,1,0};
+//     int peakindex= peakindexfound(arr,9);
+
+//     cout<<"peak index is "<<peakindex<<endl;
+
+//     return 0;
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+
+// int getpivot(int arr[],int n){
+//     int start=0;
+//     int end=n-1;
+//     int mid= start + (end - start )/2;
+//     while(start<end){
+//         if(arr[mid]>=arr[0]){
+//             start=mid+1;
+//         }
+//         else{
+//             end=start;
+//         }
+//         mid= start + (end - start )/2; 
+//     }
+
+//     return start;
+// }
+// int main(){  
+//     int arr[7]={3,8,10,17,23,34,1};
+
+//     int getpivotelement= getpivot(arr,7);
+
+//     cout<<"getting the pivot element "<<getpivotelement<<endl;
+     
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int binarysearch(int arr[],int s,int e,int key){
+//     int start=s;
+//     int end=e;
+//     int mid= start + (end - start) /2;
+//     while(start<=end){
+//         if(arr[mid]==key){
+//             return mid;
+//         }
+//         if(arr[mid]>key){
+//             end=mid-1;
+//         }
+//         else{
+//             start=mid+1;
+//         }
+
+//         mid= start + (end - start)/2;
+//     }
+
+//     return -1;
+// }
+
+// int getpivot(int arr[],int n){
+//     int start=0;
+//     int end=n-1;
+//     int mid= start+ (end-start)/2;
+//     while(start<end){
+//         if(arr[mid]>arr[0]){
+//             start=mid+1;
+//         }
+//         else{
+//             end=mid;
+//         }
+//         mid= start + (end- start)/2;
+//     }
+//     return start;
+// }
+
+
+// int searchelement(int arr[],int n, int key){
+//     int pivot=getpivot(arr,n);
+//     if((key>arr[pivot])&&(key<arr[n-1])){
+//         return binarysearch(arr,pivot,n-1,key);
+
+//     }
+//     else{
+//          return binarysearch(arr,0,pivot-1,key);
+//     }
+// }
+
+// int main(){
+//     int arr[7]={3,8,10,17,23,34,1};
+
+//    int  arrsearchsorted= searchelement(arr,7,23);
+//    cout<<"seached element in sorted array "<<arrsearchsorted<<endl;
+    
+// }
+
+// square root using binary search .
+// #include<iostream>
+// using namespace std;
+// int sqrtusingbinary(int num){
+//     int start=0;
+//     int end=num-1;
+//     int mid= start + (end-start)/2;
+
+//     int ans=-1;
+//     while(start<=end){
+//         int square=mid*mid;  // here we can use different datatypes too like long long int to store bigger values.
+//         if(square==num){
+//             return mid;
+//         }
+//         if(square<num){
+//             ans=mid;
+//             start=mid+1;
+//         }
+//         else{
+//             end=mid-1;
+//         }
+//         mid=start + (end-start)/2;
+
+//     }
+//     return ans;
+// }
+
+// int main(){
+//     int sqrt=sqrtusingbinary(9);
+//     cout<<"square root using binary search "<<sqrt<<endl;
+// }
+
+//book allocation problem .
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// bool ispossible(vector<int>arr,int n,int m,int mid){
+//     int studentcount=1;
+//     int pagesum=0;
+//     for(int i=0;i<n;i++){
+//         if(pagesum+arr[i]<=mid){
+//             pagesum=pagesum+arr[i];
+//         }
+//         else{
+//             studentcount++;
+//             if(studentcount>m||arr[i]>mid){
+//                 return false;
+//             }
+//             pagesum=arr[i];
+//         }
+//     }
+
+//     return true;
+
+// }
+
+// int allocate(vector<int>arr,int n,int m){
+//     int start=0;
+//     int sum=0;
+//     int ans=-1;
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//     }
+//     int end=sum;
+//     int mid=start + (end-start)/2;
+//     while(start<=end){
+//         if(ispossible(arr,n, m, mid)){
+//             ans=mid;
+//             end=mid-1;
+//         }
+//         else{
+//             start=mid+1;
+//         }
+
+//         mid=start + (end-start)/2;
+//     }
+
+//     return ans;
+// }
+
+
+// int main(){
+//     vector<int> arr;
+//     arr.push_back(10);
+//     arr.push_back(20);
+//     arr.push_back(30);
+//     arr.push_back(40);
+
+//     int possible=ispossible(arr,arr.size(),2,60); 
+//     int allocatebook=allocate(arr,arr.size(),2);
+
+//     cout<<"maximam allocate book  between students is  minimum : "<<allocatebook<<endl;
+
+
+//     return 0;
+// }
+
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+//                                                        // m is 
+// bool isleasttime(vector<int>arr,int m,int n,int mid){  // n is the no of painter 
+//     int paintercount=1;
+//     int minimumtimetaken=0;
+//     for(int i=0;i<n;i++){
+//         if(minimumtimetaken+arr[i]<=mid){
+//         minimumtimetaken=minimumtimetaken+arr[i];
+//         }
+//         else{
+//             paintercount++;
+//             if((paintercount>n)||arr[i]>mid){
+//                 return false ;
+//             }
+//             minimumtimetaken=arr[i];
+//         }
+//     }
+
+//     return true;
+    
+// }
+
+// int painterpaintproblem(vector<int>arr,int n,int m){
+//     int start=0;
+//     int sum=0;
+//     int ans=-1;
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//     }
+//     int end=sum;
+//     int mid= start + (end-start)/2;
+//     if(isleasttime(arr,m, n,mid)){
+//         ans=mid;
+//         end=mid-1;
+//     }
+//     else{
+//         start=mid+1;
+//     }
+
+//     return ans;
+// }
+
+
+// int main(){
+//     vector<int> arr;
+//     arr.push_back(2);
+//     arr.push_back(1);
+//     arr.push_back(5);
+//     arr.push_back(6);
+//     arr.push_back(2);
+//     arr.push_back(3);
+  
+
+
+//     //int leasttime=isleasttime(arr,arr.size(),2,10);
+
+//     int painterleasttimetaken=painterpaintproblem(arr,arr.size(),2);
+
+//     cout<<"least time taken for painter to paint the boxes in the contingous manner  : "<<painterleasttimetaken<<endl;
+
+//     return 0;
+// }
+
+//aggresive cows.
+
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// bool ismaximum(vector<int>stalls,int k,int mid){
+//     int cowcount=1;
+//     int lastpos=stalls[0];
+//     for(int i=0;i<stalls.size();i++){
+//         if((stalls[i]-lastpos)>=mid){
+//             cowcount++;
+//             if(cowcount==k){
+//                 return true;
+//             }
+//             lastpos=stalls[i];
+//         }
+//     }
+
+//     return false;
+
+// }
+
+// int maximumdist(vector<int>stalls,int k){
+    
+//     sort(stalls.begin(),stalls.end());
+//     int start=0;
+//     int maxi=-1;
+//     int ans=-1;
+//         for(int i=0;i<stalls.size();i++){
+//         maxi=max(maxi,stalls[i]);
+//     }
+    
+//     int end=maxi;
+//     int mid= start + (end-start)/2;
+//     while(start<=end){
+//         if(ismaximum(stalls,k,mid)){
+//             ans=mid;
+//             start=mid+1;
+//         }
+//         else{
+//             end=mid-1;
+//         }
+//         mid=start + (end-start)/2;
+//     }
+
+//     return ans;
+// }
+
+// int main(){
+//     vector<int>arr;
+//     arr.push_back(4);
+//     arr.push_back(2);
+//     arr.push_back(1);
+//     arr.push_back(3);
+//     arr.push_back(6);
+
+//     int maximumdistance=maximumdist(arr,2);
+//     cout<<"maximum distance between two cows so that they don't fight is : "<<maximumdistance<<endl;
+
+//     return 0;
+// }
