@@ -1,0 +1,156 @@
+
+// array 
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5,6};
+//     for(int i=0;i<=5;i++){
+//         cout<<arr[i]<<endl;
+//     } 
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int maxarray(int arr[],int n){
+//     int max=INT_MIN;
+//     for(int i=0;i<n;i++){
+//     if(max<arr[i]){
+//     max=arr[i];    
+// }
+// }
+// return max;
+// }
+// int minarray(int arr[],int n){
+//     int min=INT_MAX;
+//     for(int i=0;i<n;i++){
+//     if(min>arr[i]){
+//     min=arr[i];    
+// }
+// }
+// return min;
+// }
+
+// int main(){
+//     int size;
+//     cout<<"enter the size of the array"<<endl;
+//     cin>>size;
+
+//     int arr[100];
+//     for(int i=0;i<size;i++){
+//         cin>>arr[i];
+//     }
+
+//     cout<<"maximum element in the array "<<maxarray(arr,size)<<endl;
+//     cout<<"minimum element in the array "<<minarray(arr,size)<<endl;
+// }
+
+
+//linear seach 
+// #include<iostream>
+// using namespace std;
+
+// bool linearsearch(int arr[],int size,int key){
+//     for(int i=0;i<size;i++){
+//         if(arr[i]==key){
+//             return 1;
+//         }
+//     }
+//     return 0;
+
+// }
+// int main(){
+//     int arr[10]={12,23,43,54,32,546,65,65,45,3};
+//     int key;
+//     cout<<"enter the element to search"<<endl;
+//     cin>>key;
+
+//     bool found= linearsearch(arr,10,key); 
+//     if(found){
+//         cout<<"key is present in the array "<<endl;
+//     }
+//     else{
+//         cout<<"key is not present in the array "<<endl;
+//     }
+
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+// void reversearray(int arr[],int n){
+//     int start=0;
+//     int end=n-1;
+//     while(start<=end){
+//         swap(arr[start],arr[end]);
+//         start++;
+//         end--;
+//     }
+//     return ;
+// }
+// void printarray(int arr[],int n){
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+//     return ;
+// }
+
+
+// int main(){
+//     int arr[6]={1,33,4,2,54,2};
+//     reversearray(arr,6);
+//     printarray(arr,6);
+
+//     return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// int  arraysum(int arr[],int n){
+//     int sum=0;
+//     for(int i=0;i<n;i++){
+//         sum=sum+arr[i];
+//     }
+//     return sum;
+
+// }
+
+// int main(){
+//     int arr[10]={1,2,34,4,5,6,7,8,6,4};
+//     int Sum=arraysum(arr,10);
+ 
+//     cout<<"the sum of the all elements in an array: "<<Sum<<endl;
+
+    
+// }
+
+
+//#include<iostream>
+// using namespace std;
+// void swapalternate(int arr[],int n){
+//     for(int i=0;i<(n-1);i+=2){
+//         swap(arr[i],arr[i+1]);
+// }
+// }
+
+// void printarray(int arr[],int n){
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+// int main(){
+//     int arr[6]={1,2,3,4,5,6};
+//     int Arr[5]={1,2,3,4,5};
+//     swapalternate(arr,6);
+//     printarray(arr,6);
+//     cout<<endl;
+//     swapalternate(Arr,5);
+//     printarray(Arr,5);
+
+//     return 0;
+// }
+
