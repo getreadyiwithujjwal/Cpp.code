@@ -1,0 +1,239 @@
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int num,n;
+//     int product=1,sum=0;
+//     cout<<"enter the number ";
+//     cin>>num;
+//     int i=1;
+//     while(num>0){
+//         n=num%10;
+//         product=product*n;
+//         sum=sum+n;
+//         num=num/10;
+//         i++;
+//     }
+//     cout<<" product is "<< product <<endl;
+//     cout<<" sum is "<< sum <<endl;
+
+//     int subtraction=product-sum;
+    
+//     cout<<" difference of product and sum is "<<subtraction;
+    
+// }
+
+// #include<iostream>
+// #include<math.h>
+// using namespace std;
+// int main(){
+//     int number;
+//     cout<<"Enter the number : ";
+//     cin>>number;
+//     int reverse=0;
+//     for(int i=0;number>0;i++){
+//         int digit=number%10;
+//         reverse=+digit+reverse*10;
+//         number=number/10;
+//         i++;
+//     }
+//     cout<<" Number after reversing the digits is "<<reverse<<endl;
+//     return 0;
+
+// }
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int n;
+//     cout<<"enter the number ";
+//     cin>>n;
+//     int m = n;
+//     int mask=0;
+//     int answer;
+//     while(m!=0){
+//         mask=(mask<<1)|1;
+//         m=m>>1;
+//         answer=(mask)&(~n);
+//     }
+//     cout<<"answer after the compliment " <<answer<<endl;
+
+//     return 0;
+
+// }
+
+
+//power of 2.
+// #include<iostream>
+// #include<math.h>
+// using namespace std;
+// int main(){
+//     int num;
+//     cout<<"enter the number :";
+//     cin>>num;
+//     int ans=0;
+
+//     bool check=false;
+//     for(int i=0;i<=30;i++){
+//         ans=pow(2,i);
+    
+//     if(ans==num){
+//         check=true;
+//         break;
+//     }
+
+//     }
+
+//     if(check){
+//         cout<<"true and the number is "<<ans<<endl;
+//     }
+//     else{
+//         cout<<"false wrong code ";
+//     }
+// }
+
+// #include<iostream>
+// using namespace std;
+// int unique(int arr[],int n){
+//     int ans=0;
+//     for(int i=0;i<n;i++){
+//          ans=ans^arr[i];
+//     }
+//     return ans;
+// }
+// int main(){
+//     int arr[7]={1,2,2,4,3,1,4};
+//     int UNI=unique(arr,7);
+
+//     cout<<"the unique element is : "<<UNI<<endl;
+
+// }
+
+// #include <iostream>
+// #include <algorithm>
+// #include <array>
+// using namespace std;
+
+// bool uniqueoccurence(int arr[], int n) {
+//     int ans = 0;
+//     for (int i = 0; i < n; i++) {
+//         ans = ans ^ arr[i];
+//     }
+//     return ans;
+// }
+
+// int main() {
+//     array<int, 6> arr = {3, 4, 4, 1, 4, 3};
+//     sort(arr.begin(), arr.end());
+
+//     array<int, 6> Arr; 
+//     int n = arr.size();
+//     int count = 0; 
+
+//     for (int i = 0; i < n; i++) {
+//         if (i == 0 || arr[i] != arr[i - 1]) {
+//             Arr[count] = arr[i]; 
+//             count++;
+//         }
+//     }
+
+//     int UNO = uniqueoccurence(Arr.data(), count);
+//     cout << "unique number of occurrence is true->1 and false->0 " << UNO;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int findDuplicate(vector<int> &arr) {
+//     int ans = 0;
+//     for (int i = 0; i < arr.size(); i++) {
+//         ans = ans ^ arr[i];
+//     }
+//     for (int i = 1; i < arr.size(); i++) {
+//         ans = ans ^ i;
+//     }
+
+//     return ans; 
+// }
+
+// int main() {
+//     vector<int> a;
+//     a.push_back(1);
+//     a.push_back(3);
+//     a.push_back(4);
+//     a.push_back(2);
+//     a.push_back(2);
+//     int duplicate = findDuplicate(a);
+//     cout << "duplicate number is: " << duplicate << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int Arr[6] = {1, 2, 3, 4, 5, 6};
+//     int arr[6] = {77, 34, 35, 7, 8, 9};
+//     bool intersectionFound = false;
+
+//     for (int i = 0; i < 6; i++) {
+//         for (int j = 0; j < 6; j++) {
+//             if (Arr[i] == arr[j]) {
+//                 intersectionFound = true;
+//                 break;
+//             }
+//         }
+//         if (intersectionFound) break;
+//     }
+
+//     if (intersectionFound) {
+//         cout << "Intersection is found in this array." << endl;
+//     } else {
+//         cout << "No intersection found." << endl;
+//     }
+
+//     return 0;
+//}
+
+
+// #include <iostream>
+// #include <vector>
+
+// using namespace std;
+
+// int main() {
+//     vector<int> a1;
+//     a1.push_back(1);
+//     a1.push_back(2);
+//     a1.push_back(3);
+//     a1.push_back(4);
+//     a1.push_back(5);
+
+
+//     vector<int> a2;
+//     a2.push_back(6);
+//     a2.push_back(7);
+//     a2.push_back(8);
+//     a2.push_back(9);
+//     a2.push_back(10);
+//     int sum = 10;  
+
+//     cout << "Pairs that sum up to " << sum << ":\n";
+
+//     for (int i = 0; i < a1.size(); ++i) {
+//         for (int j = 0; j < a2.size(); ++j) {
+//             if (a1[i] + a2[j] == sum) {
+//                 cout << "(" << a1[i] << ", " << a2[j] << ")\n";
+//             }
+//         }
+//     }
+
+//     return 0;
+// }
+
+
